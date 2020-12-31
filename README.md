@@ -8,7 +8,27 @@
 
 **Example Multi Check Permissions.** Request Permissions at same time, I recommend to use this step on your `First Activity`, now i use it on `PermissionActivity` :
 
+
+
 #### Step 1.
+Add maven `jitpack.io` and `dependencies` in `build.gradle (Project)` :
+```gradle
+// build.gradle project
+allprojects {
+  repositories {
+    ...
+    maven { url 'https://jitpack.io' }
+  }
+}
+
+// build.gradle app/module
+dependencies {
+  ...
+  implementation 'com.github.gzeinnumer:MyLibDirectory:version'
+}
+```
+
+#### Step 2.
 **Manifest.** add permission ke file manifest. I recommend to add `requestLegacyExternalStorage=true` if you using Android 10.
 
 ```xml
@@ -26,7 +46,7 @@
 ```
 
 #
-#### Step 2.
+#### Step 3.
 Add array permission that you need :
 
 **First Activity.** put request permission at your first activity, now i use it on `PermissionActivity`.
@@ -45,9 +65,8 @@ public class PermissionActivity extends AppCompatActivity {
 ```
 
 #
-#### Step 3.
+#### Step 4.
 Add function `checkPermissions` to check permission on app, if permission not granted than popup will show and ask to `Allow`. Please click `allow` :
-
 
 ```java
 public class PermissionActivity extends AppCompatActivity {
@@ -89,7 +108,7 @@ public class PermissionActivity extends AppCompatActivity {
 ```
 
 #
-#### Step 4.
+#### Step 5.
 You can check all permition are granted or not with function `onRequestPermissionsResult`, if granted you can run your code :
 
 ```java
@@ -111,7 +130,7 @@ public class PermissionActivity extends AppCompatActivity {
 ```
 
 #
-#### Step 5.
+#### Step 6.
 Add action to function `onSuccessCheckPermitions` :
 
 ```java
@@ -133,7 +152,7 @@ public class PermissionActivity extends AppCompatActivity {
   - You can modif body of function `onSuccessCheckPermitions`.
 
 #
-#### Step 6.
+#### Step 7.
 Add function `checkPermissions` in `onCreate` to check permission everytime app running :
 
 ```java
@@ -159,7 +178,7 @@ public class PermissionActivity extends AppCompatActivity {
 ```
 
 #
-#### Step 7.
+#### Step 8.
 Fullcode will be like this :
 
 ```java
@@ -227,7 +246,7 @@ public class PermissionActivity extends AppCompatActivity {
 ```
 
 #
-#### Step 8.
+#### Step 9.
 Preview :
 |![](https://github.com/gzeinnumer/MultiPermition/blob/master/assets/example1.jpg)|![](https://github.com/gzeinnumer/MultiPermition/blob/master/assets/example2.jpg)|![](https://github.com/gzeinnumer/MultiPermition/blob/master/assets/example3.jpg)|
 |--|--|--|
