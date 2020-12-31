@@ -112,35 +112,6 @@ public class PermissionActivity extends AppCompatActivity {
 
 #
 #### Step 5.
-Make and call function `onSuccessCheckPermitions` to run your code :
-
-```java
-public class PermissionActivity extends AppCompatActivity {
-
-    ...
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        if (requestCode == MULTIPLE_PERMISSIONS) {
-            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                //tambahkan ini
-                onSuccessCheckPermitions();
-            } else {
-                StringBuilder perStr = new StringBuilder();
-                for (String per : permissions) {
-                    perStr.append("\n").append(per);
-                }
-            }
-        }
-    }
-
-    ...
-
-}
-```
-
-#
-#### Step 6.
 Add action to function `onSuccessCheckPermitions` :
 
 ```java
@@ -162,7 +133,7 @@ public class PermissionActivity extends AppCompatActivity {
   - You can modif body of function `onSuccessCheckPermitions`.
 
 #
-#### Step 7.
+#### Step 6.
 Add function `checkPermissions` in `onCreate` to check permission everytime app running :
 
 ```java
@@ -188,7 +159,7 @@ public class PermissionActivity extends AppCompatActivity {
 ```
 
 #
-#### Step 8.
+#### Step 7.
 Fullcode will be like this :
 
 ```java
@@ -256,7 +227,7 @@ public class PermissionActivity extends AppCompatActivity {
 ```
 
 #
-#### Step 9.
+#### Step 8.
 Preview :
 |![](https://github.com/gzeinnumer/MultiPermition/blob/master/assets/example1.jpg)|![](https://github.com/gzeinnumer/MultiPermition/blob/master/assets/example2.jpg)|![](https://github.com/gzeinnumer/MultiPermition/blob/master/assets/example3.jpg)|
 |--|--|--|
@@ -264,8 +235,9 @@ Preview :
 
 #
 #### FullCode
+
 [Java](https://github.com/gzeinnumer/MultiPermition2/blob/master/app/src/main/java/com/gzeinnumer/multipermition2/PermissionActivity.java)
-[Manifest](https://github.com/gzeinnumer/MultiPermition2/blob/master/app/src/main/AndroidManifest.xml)
+& [Manifest](https://github.com/gzeinnumer/MultiPermition2/blob/master/app/src/main/AndroidManifest.xml)
 ---
 
 ```
