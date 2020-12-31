@@ -24,7 +24,7 @@ allprojects {
 // build.gradle app/module
 dependencies {
   ...
-  implementation 'com.github.gzeinnumer:MyLibDirectory:version'
+  implementation 'com.github.gzeinnumer:MyLibDirectory:1.5.3'
 }
 ```
 
