@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">
-    MultiPermission V2 Wiht Rebus Permission
+    MultiPermission V2 With Rebus Permission
 </h1>
 
 **Example Multi Check Permissions.** Request Permissions at same time, I recommend to use this step on your `First Activity`, now i use it on `PermissionActivity` :
