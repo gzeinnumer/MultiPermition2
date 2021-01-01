@@ -84,7 +84,7 @@ public class PermissionActivity extends AppCompatActivity {
         }
     }
 
-    //TYPE 2 if you want to know which permission that Granted or Denied use
+    //TYPE 2 if you want to know which permission that Granted or Denied. use this
     private void checkPermissions2() {
         FGPermission.getPermissionResult(this, permissions, new FGPermission.CallBackPermission() {
             @Override
