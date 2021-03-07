@@ -90,8 +90,8 @@ public class PermissionActivity extends AppCompatActivity {
             @Override
             public void result(boolean isAllGranted, List<PermissionsResult> listPermissions) {
                 Log.d(TAG, "result: "+isAllGranted);
-                for (int i = 0; i < list.size(); i++) {
-                    Log.d(TAG, "result: "+list.toString());
+                for (int i = 0; i < listPermissions.size(); i++) {
+                    Log.d(TAG, "result: "+listPermissions.toString());
                 }
                 if (isAllGranted){
                     onSuccessCheckPermitions();
